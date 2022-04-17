@@ -31,13 +31,13 @@ const Login = () => {
     return (
         <div>
             <h1>Login</h1>
-            <div className="conainer row g-3 w-50 mx-auto shadow p-3 mb-5 bg-body rounded">
+            <div className="conainer row g-3 w-50 mx-auto border border-4 shadow p-3 mb-5 bg-body rounded">
                 <form onSubmit={handleLogin} className="row g-3 ">
-                    <div className=" col-md-12 w-75">
+                    <div className=" col-12 w-100">
                         <label for="inputEmail4" className="form-label">Email</label>
                         <input onBlur={handleEmail} type="email" className="form-control" id="inputEmail4" />
                     </div>
-                    <div className="col-md-12 w-75">
+                    <div className="col-12 w-100">
                         <label for="inputPassword4" className="form-label">Password</label>
                         <input onBlur={handlePassword} type="password" className="form-control" id="inputPassword4" />
                     </div>

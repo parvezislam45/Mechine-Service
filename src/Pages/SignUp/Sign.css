@@ -5,3 +5,9 @@
 .header{
     color: aquamarine;
 }
+.form-control{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: inset 8px 8px 15px #cbced1, inset -8px -8px 15px white;
+    justify-content: center;
+}

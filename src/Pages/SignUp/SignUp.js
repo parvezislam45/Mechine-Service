@@ -68,24 +68,23 @@ const SignUp = () => {
     }
     return (
         <div>
-            <h1 className='header'>Sign Up</h1>
-            <div className="conainer row g-3 w-50 mx-auto shadow p-3 mb-5 bg-body rounded">
+            <div className=" row g-3 w-50 mx-auto border border-4 shadow p-3 mb-5 bg-body rounded">
                 <form onSubmit={createNewUser} className="row g-3 ">
-                    <div className=" col-md-12 w-75">
-                        <label for="inputEmail4" className="form-label">Email</label>
-                        <input onBlur={handaleEmail} type="email" className="form-control" id="inputEmail4" />
+                <div className="col-12 w-100">
+                        <label for="inputPassword4" className="form-label fs-4 fw-bold">Email</label>
+                        <input onBlur={handaleEmail} type="email" className="form-control" id="inputPassword4"required />
                     </div>
-                    <div className="col-md-12 w-75">
-                        <label for="inputPassword4" className="form-label">Password</label>
-                        <input onBlur={handlePassword} type="password" className="form-control" id="inputPassword4" />
+                    <div className="col-12 w-100">
+                        <label for="inputPassword4" className="form-label fs-4 fw-bold">Password</label>
+                        <input onBlur={handlePassword} type="password" className="form-control" id="inputPassword4"required />
                     </div>
-                    <div class="col-12 w-75">
-                        <label for="inputPassword4" class="form-label">confirmPassword</label>
-                        <input onBlur={handleConfirm} type="confirmPassword" class="form-control" id="inputPassword4" />
+                    <div class="col-12 w-100">
+                        <label for="inputPassword4" class="form-label fs-4 fw-bold">confirmPassword</label>
+                        <input onBlur={handleConfirm} type="Password" class="form-control" id="inputPassword4" />
                     </div>
 
-                    <div className="col-md-2 w-50">
-                        <label for="inputZip" className="form-label">Phone</label>
+                    <div className="col-md-2 w-100">
+                        <label for="inputZip" className="form-label fs-4 fw-bold">Phone</label>
                         <input onBlur={handPhone} type="text" className="form-control" id="inputZip" />
                     </div>
                     <div className="col-12">
@@ -99,7 +98,9 @@ const SignUp = () => {
                     <div className="col-12">
                         <button type="submit" className="btn btn-success">Sign in</button>
                     </div>
-                    <button onClick={googleSignIn} type="submit" className="btn btn-success">google</button>
+                    <div className="col-12">
+                    <button onClick={googleSignIn} type="submit" className="btn btn-success w-50">google</button>
+                    </div>
                     <p>Already Have an Account ? <Link to ='/login' onClick={navigateLogin}>Login</Link> </p>
                 </form>
             </div>

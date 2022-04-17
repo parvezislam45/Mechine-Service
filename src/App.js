@@ -24,7 +24,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path ="/checkout" element={
           <RequredAuth>
-            <Checkout></Checkout>
+            <Checkout path ="/checkout"></Checkout>
           </RequredAuth>
         }></Route>
       </Routes>
