@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Row } from 'react-bootstrap';
 import banner1 from "../../../src/image/banner/banner-1.jpg"
 import banner2 from "../../../src/image/banner/banner-2.jpg"
 import banner3 from "../../../src/image/banner/banner-3.jpg"
@@ -58,12 +58,14 @@ const Home = () => {
             </div>
             <h1>Our Services</h1>
       <div className="container">
+      <Row xs={1} md={3} className="g-4">
         {
           services.slice(0, 6).map(service =><Details
           key ={service.key}
           service ={service}
           ></Details>)
         }
+        </Row>
       </div>
         </div>
     );
