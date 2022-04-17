@@ -13,7 +13,7 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="" variant="dark">
+            <Navbar collapseOnSelect expand="lg" sticky='top' variant="dark">
                 <Container>
                     <Navbar.Brand className='header1fs-4 fw-bold ' style={{ color: 'DarkGrey' }}>David Machine Service</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -28,7 +28,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/signup" style={{ color: 'DarkGrey' }} className="fs-4 fw-bold">Sign -Up</Nav.Link>
                             {
                                 user ?
-                                    <Nav.Link onClick={handleSignOut} style={{ color: 'DarkGrey' }} className="fs-4 fw-bold">Sign Out</Nav.Link>
+                                    <Nav.Link onClick={handleSignOut} style={{ color: 'DarkGrey' }} className="fs-4 fw-bold">Log Out</Nav.Link>
                                     :
                                     <Nav.Link onClick={() => navigate('/login')} style={{ color: 'DarkGrey' }} className="fs-4 fw-bold">Login</Nav.Link>
 

@@ -3,6 +3,7 @@ import '../SignUp/Sign.css'
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
+import { Button, Checkbox, FormControl, FormControlLabel, FormLabel, Grid, Paper, Radio, RadioGroup, TextField, Typography } from '@material-ui/core';
 
 const SignUp = () => {
     const [email, setEmail] = useState('')
@@ -13,6 +14,9 @@ const SignUp = () => {
     const [signInWithGoogle, loading, errors] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const paperStyle = { padding: '30px 20px', width: 300, margin: "20px auto" }
+    const headerStyle = { margin: 0 }
+    const marginTop = { marginTop: 5 }
 
     const googleSignIn = () => {
         signInWithGoogle()
@@ -27,10 +31,9 @@ const SignUp = () => {
     const handleConfirm = e => {
         setConfirmPassword(e.target.value)
     }
-    const handPhone = event => {
+    const handlePhone = event => {
         setPhones(event.target.value)
     }
-    console.log(email, password, confirmPassword);
     const createNewUser = e => {
         e.preventDefault();
         if (password !== confirmPassword) {
@@ -66,48 +69,44 @@ const SignUp = () => {
                 <p>Signed In User: {user?.displayName}</p>
             </div>
         );
+
     }
     return (
-        <div>
-            <div className=" row g-3 w-30 mx-auto border border-4 shadow p-3 mb-5 bg-body rounded">
-                <form onSubmit={createNewUser} className="row g-3 ">
-                    <div className="col-12 w-100">
-                        <label for="inputPassword4" className="form-label fs-4 fw-bold">Email</label>
-                        <input onBlur={handaleEmail} type="email" className="form-control" id="inputPassword4" required />
-                    </div>
-                    <div className="col-12 w-100">
-                        <label for="inputPassword4" className="form-label fs-4 fw-bold">Password</label>
-                        <input onBlur={handlePassword} type="password" className="form-control" id="inputPassword4" required />
-                    </div>
-                    <div class="col-12 w-100">
-                        <label for="inputPassword4" class="form-label fs-4 fw-bold">confirmPassword</label>
-                        <input onBlur={handleConfirm} type="Password" class="form-control" id="inputPassword4" />
-                    </div>
-
-                    {/* <div className="col-md-2 w-100">
-                        <label for="inputZip" className="form-label fs-4 fw-bold">Phone</label>
-                        <input onBlur={handPhone} type="text" className="form-control" id="inputZip" />
-                    </div> */}
-                    <div className="col-12">
-                        <div className="form-check">
-                            <input className="form-check-input" type="checkbox" id="gridCheck" />
-                            <label className="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                        { error? error: '' }
-                        < div className="col-12">
-                    <button type="submit" className="btn btn-success">Sign in</button>
-            </div>
-            <div className="col-12">
-                <button onClick={googleSignIn} type="submit" className="btn btn-success w-50">google</button>
-            </div>
-            <p>Already Have an Account ? <Link to='/login' onClick={navigateLogin}>Login</Link> </p>
-        </form>
-            </div >
-        </div >
-    );
+        <Grid>
+            <Paper elevation={20} style={paperStyle}>
+                <Grid align='center'>
+                    <h2 style={headerStyle}>Sign Up</h2>
+                    <Typography variant='caption' gutterBottom>Please fill this form to create an account !</Typography>
+                </Grid>
+                <form onSubmit={createNewUser}>
+                    <TextField fullWidth label='Name' placeholder="Enter your name" />
+                    <TextField onBlur={handaleEmail} fullWidth label='Email'type='emeil' placeholder="Enter your email" />
+                    <FormControl component="fieldset" style={marginTop}>
+                        <FormLabel component="legend">Gender</FormLabel>
+                        <RadioGroup aria-label="gender" name="gender" style={{ display: 'initial' }}>
+                            <FormControlLabel value="female" control={<Radio />} label="Female" />
+                            <FormControlLabel value="male" control={<Radio />} label="Male" />
+                        </RadioGroup>
+                    </FormControl>
+                    <TextField onBlur={handlePhone} fullWidth label='Phone Number' placeholder="Enter your phone number" />
+                    <TextField onBlur={handlePassword} fullWidth label='Password'type='password' placeholder="Enter your password" />
+                    <TextField onBlur={handleConfirm} fullWidth label='Confirm Password' type='password'placeholder="Confirm your password" />
+                    <FormControlLabel
+                        control={<Checkbox name="checkedA" />}
+                        label="I accept the terms and conditions."
+                    />
+                     { error? error: '' }
+                     <div className="mt-2">
+                     <Button type='submit' variant='contained' color='primary'>Sign up</Button>
+                     </div>
+                     <div className="mt-1">
+                     <Button onClick={ googleSignIn} type='submit' variant='contained' color='primary'>Google</Button>
+                     </div>
+                     <p>Already Have a Account ? <Link to ='/login' onClick={navigateLogin}>Log In</Link> </p>
+                </form>
+            </Paper>
+        </Grid>
+        )
 };
 
 export default SignUp;

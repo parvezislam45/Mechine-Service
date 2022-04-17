@@ -1,7 +1,9 @@
+import { Button, Grid, Paper, TextField, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -32,36 +34,35 @@ const Login = () => {
     const navigateSignup = () => {
         navigate = "/signup"
     }
+    const paperStyle = { padding: '30px 20px', width: 300, margin: "20px auto" }
+    const headerStyle = { margin: 0 }
     return (
-        <div>
-            <h1>Login</h1>
-            <div className="conainer row g-3 w-50 mx-auto border border-4 shadow p-3 mb-5 bg-body rounded">
-                <form onSubmit={handleLogin} className="row g-3 ">
-                    <div className=" col-12 w-100">
-                        <label for="inputEmail4" className="form-label">Email</label>
-                        <input onBlur={handleEmail} type="email" className="form-control" id="inputEmail4" />
-                    </div>
-                    <div className="col-12 w-100">
-                        <label for="inputPassword4" className="form-label">Password</label>
-                        <input onBlur={handlePassword} type="password" className="form-control" id="inputPassword4" />
-                    </div>
+        <Grid>
+            <Paper elevation={20} style={paperStyle}>
+                <Grid align='center'>
+                    <h2 style={headerStyle}>Sign Up</h2>
+                    <Typography variant='caption' gutterBottom>Please fill this form to create an account !</Typography>
+                </Grid>
+                <form onSubmit={handleLogin}>
+                    <TextField onBlur={handleEmail} fullWidth label='Email'type='email' placeholder="Enter your email" />
+                    <TextField onBlur={handlePassword} fullWidth label='Password'type='password' placeholder="Enter your password" />
                     <p>{error?.message}</p>
                     {loading && <p>Loading</p>}
-                    <div className="col-12">
-                        <button type="submit" className="btn btn-success">Login</button>
+                    <div className='mt-5'>
+                    <Button type='submit' variant='contained' color='primary'>Login</Button>
                     </div>
-                    <div className="col-12">
-                    <button
+                    <div className="mt-2">
+                    <Button className='btn'
                         onClick={async () => {
                             await sendPasswordResetEmail(email);
                             alert('Sent email');
-                        }}type="submit"className="btn btn-success">Reset password</button>
+                        }}type="submit"variant='contained' color='primary'><span className='text'>Reset password</span></Button>
                     </div>
-                    <p>Don't Have a Account ? <Link to ='/signup' onClick={navigateSignup}>Sign Up</Link> </p>
+                        <p>Don't Have a Account ? <Link to ='/signup' onClick={navigateSignup}>Sign Up</Link> </p>
                 </form>
-            </div>
-        </div>
-    );
+            </Paper>
+        </Grid>
+    )
 };
 
 export default Login;

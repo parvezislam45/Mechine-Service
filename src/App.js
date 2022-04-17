@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import Header from './Pages/Header/Header';
 import Checkout from './Pages/Checkout/Checkout';
 import RequredAuth from './RequredAuth/RequredAuth';
+import NotFound from './Pages/NotFound/NotFound'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Checkout path ="/checkout"></Checkout>
           </RequredAuth>
         }></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

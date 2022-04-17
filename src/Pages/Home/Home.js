@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardGroup, Carousel, Col, Row } from 'react-bootstrap';
+import { Carousel, Row } from 'react-bootstrap';
 import banner1 from "../../../src/image/banner/banner-1.jpg"
 import banner2 from "../../../src/image/banner/banner-2.jpg"
 import banner3 from "../../../src/image/banner/banner-3.jpg"
