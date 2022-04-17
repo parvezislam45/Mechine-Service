@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../SignUp/Sign.css'
 import { useCreateUserWithEmailAndPassword ,useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const [email, setEmail] = useState('')
@@ -42,6 +42,9 @@ const SignUp = () => {
         }
         createUserWithEmailAndPassword(email, password);
         navigate('/home')
+    }
+    const navigateLogin = ()=>{
+        navigate ="/login"
     }
     if (errors) {
 
@@ -97,6 +100,7 @@ const SignUp = () => {
                         <button type="submit" className="btn btn-success">Sign in</button>
                     </div>
                     <button onClick={googleSignIn} type="submit" className="btn btn-success">google</button>
+                    <p>Already Have an Account ? <Link to ='/login' onClick={navigateLogin}>Login</Link> </p>
                 </form>
             </div>
         </div>
