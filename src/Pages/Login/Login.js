@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Login = () => {
@@ -15,18 +15,22 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const handleEmail = event =>{
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth)
+    const handleEmail = event => {
         setEmail(event.target.value)
     }
-    const handlePassword = event =>{
+    const handlePassword = event => {
         setPassword(event.target.value)
     }
-    if(user){
-        navigate (from, {replace:true})
+    if (user) {
+        navigate(from, { replace: true })
     }
-    const handleLogin = event =>{
+    const handleLogin = event => {
         event.preventDefault()
-        signInWithEmailAndPassword(email,password)
+        signInWithEmailAndPassword(email, password)
+    }
+    const navigateSignup = () => {
+        navigate = "/signup"
     }
     return (
         <div>
@@ -46,7 +50,14 @@ const Login = () => {
                     <div className="col-12">
                         <button type="submit" className="btn btn-success">Login</button>
                     </div>
-                    {/* <p>Already Have an Account ? <Link to ='/login' onClick={navigateLogin}>Login</Link> </p> */}
+                    <div className="col-12">
+                    <button
+                        onClick={async () => {
+                            await sendPasswordResetEmail(email);
+                            alert('Sent email');
+                        }}type="submit"className="btn btn-success">Reset password</button>
+                    </div>
+                    <p>Don't Have a Account ? <Link to ='/signup' onClick={navigateSignup}>Sign Up</Link> </p>
                 </form>
             </div>
         </div>

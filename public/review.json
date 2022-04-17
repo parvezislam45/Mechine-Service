@@ -10,56 +10,56 @@
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Gasket Repairing",
     "details": "This is usually where we tell you to take a breath, grab your tools, head to the garage, and we’ll walk you through the repair, but head gasket work is a different animal. Unfortunately, this is not a problem you or we can easily resolve with a 1-hour garage session.",
-    "ratings": 30,
+    "price": 30,
     "img": "https://i.ibb.co/ZTpTSsX/Cuttintools-Teaser-Image.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Shaft Serviceing",
     "details": "A shaft may be repaired by laser cladding technology and spray process. Shaft repair kits are also suitable for repairing worn shafts. It help to avoid hardening a shaft",
-    "ratings": 50,
+    "price": 50,
     "img": "https://i.ibb.co/ZBmmSLG/depositphotos-100853870-stock-photo-metalworking-cnc-milling-machine.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Rotor Servecing",
     "details": "The most convenient time to check the rotors is during a brake inspection. On most vehicles, it’s difficult to get a good look at your brake rotors yourself without removing the wheels.",
-    "ratings": 35,
+    "price": 35,
     "img": "https://i.ibb.co/r7yrPDp/lathe-4021097-340.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Piston Serviceing",
     "details": "Remove the rod nuts and cap them with a wrench, and slide the rod and piston assembly up into the cylinder away from the crankshaft and out of the cylinder. Place the assembly on a workbench and repeat this operation until all piston and rod assemblies have been removed",
-    "ratings": 70,
+    "price": 70,
     "img": "https://i.ibb.co/kV7SmWp/Maxi-Mill-SEC12-Teaser-Image.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Guinding",
     "details": "TGrinding machines remove material from the workpiece by abrasion, which can generate substantial amounts of heat. To cool the workpiece so that it does not overheat and go outside its tolerance, grinding machines incorporate a coolant. The coolant also benefits the machinist as the heat generated may cause burns",
-    "ratings": 40,
+    "price": 40,
     "img": "https://i.ibb.co/g4ZP3WR/v-engine-strokes-main-shaft-visualization-computer-aided-design-cad-mechanical-industrial-machine-en.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Driling",
     "details": "There are numerous types of drilling machines that we offer, utilized by the industries according to their demand and requirement for the procedure. An all-geared radial drilling machine is one of our heavy-duty drilling machines used for drilling strong and robust metals/materials. The pillar drilling machine is another type of drilling machine",
-    "ratings": 60,
+    "price": 60,
     "img": "https://i.ibb.co/pjby7h7/125513945-cnc-milling-machine-work-coolant-and-lubrication-in-gear-metalwork-industry.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "O-ring Repair",
     "details": "O-Ring maker kit, a spar O-Ring is there when you need it most. Splits or breaks of an O-Ring can mean unnecessary downtime or delays",
-    "ratings": 20,
+    "price": 20,
     "img": "https://i.ibb.co/vmrwkwG/axis-1683671-340.jpg"
   },
   {
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Engine Service",
     "details": "Turbine Engine Solutions, Inc. is an FAA/EASA (Federal Aviation Administration/ European Aviation Safety Agency) approved repair station for the repair and overhaul",
-    "ratings": 80,
+    "price": 80,
     "img": "https://i.ibb.co/GTvTrLt/263f9e9c6a2495a82ee987337fa7f0cb.jpg"
   }
   

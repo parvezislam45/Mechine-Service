@@ -8,7 +8,7 @@ const Details = ({service}) => {
             <img className='border border-primary rounded' src={img} alt="" />
             <h4>{name}</h4>
             <p>{details}</p>
-            <h5>{price}</h5>
+            <h5> ${price}</h5>
             <button type="button" class="btn btn-success"><Link to="/checkout"><span className='text-white'>Procced Checkout</span></Link></button>
         </div>
     );
