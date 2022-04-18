@@ -3,10 +3,14 @@ import { Carousel, Row } from 'react-bootstrap';
 import banner1 from "../../../src/image/banner/banner-1.jpg"
 import banner2 from "../../../src/image/banner/banner-2.jpg"
 import banner3 from "../../../src/image/banner/banner-3.jpg"
-import img1 from "../../../src/image/axis-1683671__340.jpg"
-import img2 from "../../../src/image/cnc-lathe-machine-drilling-hole-brass-shaft-part-drill-tool-hi-technology-automotive-manufacturing-process-144510691.jpg"
 import useServices from '../../Hook/Hook';
 import Details from '../Details/Details';
+import img from '../../../src/image/david.png'
+import ayon from '../../../src/image/ayon.jpg'
+import asharaful from '../../../src/image/ashraful.jpg'
+import shabbir from '../../../src/image/shabbir.jpg'
+import sourav from '../../../src/image/sourav.jpg'
+import tamim from '../../../src/image/tamim.jpg'
 
 const Home = () => {
     const [index, setIndex] = useState(0);
@@ -69,45 +73,96 @@ const Home = () => {
                     }
                 </Row>
             </div>
-            <div className="section">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <img src={img1} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div className="section ">
+            <h1>Happy Client Review</h1>
+                <div className="row row-cols-1 row-cols-md-3 g-4 mt-2 container">
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={img} className="card-img-top image w-75 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">David</h5>
+                                    <h6 className="card-text">He Is a Good Expert.his Service High Class.i am Satified his service</h6>
+                                    <h6>rating</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src={img2} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={shabbir} className="card-img-top image w-50 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">Sabbir Mahammud</h5>
+                                    <h6 className="card-text">I LOve His Service.hid behavior</h6>
+                                    <h5>Ratings</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src={img1} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={ayon} className="card-img-top image w-75 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">Ayon Judder</h5>
+                                    <h6 className="card-text">I LOve His Service.alWays good service provide</h6>
+                                    <h5>Ratings</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={sourav} className="card-img-top image w-75 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">Sourav Arefin</h5>
+                                    <h6 className="card-text">HIs Work Very Good.I refer to people get service him</h6>
+                                    <h5>Ratings</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={asharaful} className="card-img-top image w-75 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">Asharaful Islam</h5>
+                                    <h6 className="card-text">He is Highly Work for Mechine.His Reparing Good service </h6>
+                                    <h6>Ratings</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card">
+                            <div className='d-flex align-items-center'>
+                                <div>
+                                    <img src={tamim} className="card-img-top image w-75 rounded-circle mx-auto d-block" alt="..." />
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title">Card title</h5>
+                                    <h6 className="card-text">His Work so Good.I am Highly Remmand to his Workshop</h6>
+                                    <h6>Ratings</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <footer className='mt-5 sticky-bottom'>
-                <div class="card text-center bg-dark">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Design By Aurthohin Parvez</h5>
-                        <p class="card-text text-white">Learner Programming Hero<br></br>Batch-5</p>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 };

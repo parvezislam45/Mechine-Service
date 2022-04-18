@@ -31,6 +31,14 @@ function App() {
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <footer className='mt-5 sticky-bottom'>
+                <div class="card text-center bg-dark">
+                    <div class="card-body">
+                        <h5 class="card-title text-white">Design By Aurthohin Parvez</h5>
+                        <p class="card-text text-white">Learner Programming Hero<br></br>Batch-5</p>
+                    </div>
+                </div>
+            </footer>
     </div>
   );
 }
