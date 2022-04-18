@@ -12,8 +12,8 @@ Project Name : David Mechine Service Center!!
 * Details About My Services
 * Details About my vision
 * Use Sign in & Log in Sytem
-* Use Forget Password Varificatin send Email
-* Ans 3 Question on Blog
+* Use Forget Password Varification send Email
+* Answer 3 Question on Blog
 
 # Getting Started with Create React App
 
