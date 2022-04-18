@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <Font family='Roboto' cursive weight={800}>
-      <h1>David Service Center</h1>
+      <h6 className='text-center fs-1 fw-bold'>David Machine Service</h6>
       </Font>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

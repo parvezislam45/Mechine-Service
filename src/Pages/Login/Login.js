@@ -1,6 +1,6 @@
 import { Button, Grid, Paper, TextField, Typography } from '@material-ui/core';
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
@@ -11,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
         user,
@@ -34,6 +35,10 @@ const Login = () => {
     const navigateSignup = () => {
         navigate = "/signup"
     }
+    const googleSignIn = () => {
+        signInWithGoogle()
+        navigate('/home')
+    }
     const paperStyle = { padding: '30px 20px', width: 300, margin: "20px auto" }
     const headerStyle = { margin: 0 }
     return (
@@ -51,6 +56,7 @@ const Login = () => {
                     <div className='mt-5'>
                     <Button type='submit' variant='contained' color='primary'>Login</Button>
                     </div>
+                    <Button onClick={ googleSignIn} className='mt-2' type='submit' variant='contained' color='primary'>Google</Button>
                     <div className="mt-2">
                     <Button className='btn'
                         onClick={async () => {

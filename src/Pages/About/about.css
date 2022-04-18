@@ -1,0 +1,10 @@
+.pic{
+    height: 30%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px, -5px -5px 10px white;
+}
+.detail{
+    width: 35%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px, -5px -5px 10px white; 
+}

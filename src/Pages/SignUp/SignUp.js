@@ -14,7 +14,6 @@ const SignUp = () => {
     const [signInWithGoogle, loading, errors] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
-    const [signInWithMicrosoft] = useSignInWithMicrosoft(auth);
     const paperStyle = { padding: '30px 20px', width: 300, margin: "20px auto" }
     const headerStyle = { margin: 0 }
     const marginTop = { marginTop: 5 }
@@ -22,9 +21,6 @@ const SignUp = () => {
     const googleSignIn = () => {
         signInWithGoogle()
         navigate('/home')
-    }
-    const microsoftSignIn =()=>{
-        signInWithMicrosoft()
     }
     const handaleEmail = event => {
         setEmail(event.target.value);
@@ -105,7 +101,6 @@ const SignUp = () => {
                      </div>
                      <div className="mt-1">
                      <Button onClick={ googleSignIn} type='submit' variant='contained' color='primary'>Google</Button>
-                     <Button onClick={ microsoftSignIn} type='submit' variant='contained' color='primary'>Microsoft</Button>
                      </div>
                      <p>Already Have a Account ? <Link to ='/login' onClick={navigateLogin}>Log In</Link> </p>
                 </form>
