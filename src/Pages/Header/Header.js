@@ -12,8 +12,8 @@ const Header = () => {
         signOut(auth);
     }
     return (
-        <div>
-            <Navbar collapseOnSelect expand="lg" sticky='top' variant="dark">
+        <div className='sticky-top'>
+            <Navbar collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand className='header1fs-4 fw-bold ' style={{ color: 'DarkGrey' }}>David Machine Service</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,7 +38,6 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <h1>David Machine Service</h1>
         </div>
     );
 };

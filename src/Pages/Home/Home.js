@@ -100,7 +100,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <footer className='mt-5'>
+            <footer className='mt-5 sticky-bottom'>
                 <div class="card text-center bg-dark">
                     <div class="card-body">
                         <h5 class="card-title text-white">Design By Aurthohin Parvez</h5>
