@@ -1,3 +1,20 @@
+Project Name : David Mechine Service Center!!
+
+# Live Link :https://mechine-service.firebaseapp.com/home
+# Git Link : https://github.com/programming-hero-web-course-4/independent-service-provider-parvezislam45/
+
+# Project Over-View
+* Use React
+* Use React Custom Hook
+* Use React Bootsrap
+* Use Firebase Authenticatin Email, Password & Google
+* Use Carosel To Banner Section
+* Details About My Services
+* Details About my vision
+* Use Sign in & Log in Sytem
+* Use Forget Password Varificatin send Email
+* Ans 3 Question on Blog
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
