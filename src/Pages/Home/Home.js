@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
-import banner1 from "../../../src/image/banner/banner-1.jpg"
-import banner2 from "../../../src/image/banner/banner-2.jpg"
-import banner3 from "../../../src/image/banner/banner-3.jpg"
+import banner1 from "../../../src/image/banner/repair.png"
+import banner2 from "../../../src/image/banner/coffe.jpg"
+import banner3 from "../../../src/image/banner/handle.jpg"
 import useServices from '../../Hook/Hook';
 import Details from '../Details/Details';
 import img from '../../../src/image/david.png'
@@ -31,8 +31,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Well Come To David Service</h3>
+                            <p>All You Need Their</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -43,8 +43,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>All Maintenance Service</h3>
+                            <p>Any Kind Of Maintenance There</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -55,15 +55,15 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                            </p>
+                            <h3>High Class Service Available</h3>
+                            <p>Your All Needed Their</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <h1>Our Services</h1>
+            <Font family='Roboto' cursive weight={800}>
+                        <h1 className='text-pink-600'>My Service</h1>
+                            </Font>
             <div className="">
                 <Row xs={1} md={3} className="g-4">
                     {
@@ -75,7 +75,9 @@ const Home = () => {
                 </Row>
             </div>
             <div className="section ">
-                <h1>Happy Client Review</h1>
+            <Font family='Roboto' cursive weight={800}>
+                        <h1 className='text-pink-600'>Happy Client Review</h1>
+                            </Font>
                 <div className="row row-cols-1 row-cols-md-3 g-4 mt-2 container">
                     <div className="col">
                         <div className="card">

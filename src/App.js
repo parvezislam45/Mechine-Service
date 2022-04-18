@@ -34,7 +34,7 @@ function App() {
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <footer className='mt-5 sticky-bottom'>
+      <footer className='mt-5 sticky-'>
         <div class="card text-center bg-dark">
           <div class="card-body">
             <h5 class="card-title text-white">Design By Aurthohin Parvez</h5>

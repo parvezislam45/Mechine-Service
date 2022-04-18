@@ -1,0 +1,23 @@
+.link{
+    text-decoration: none;
+}
+.checkoutBtn{
+    cursor: pointer;
+    width: 45%;
+    height: 45px;
+    border-radius: 20px;
+    background: indigo;
+    color: white;
+    transition: .10s linear;
+}
+.image{
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px, -5px -5px 10px white;
+}
+
+.checkoutBtn :hover{
+    background:darkmagenta
+}
+.checkoutBtn :active{
+    background:darkturquoise;
+}
